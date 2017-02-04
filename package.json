@@ -23,7 +23,8 @@
     "docs:build": "gitbook build -g reactjs/react-modal",
     "docs:build:watch": "gitbook serve",
     "docs:publish": "cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:reactjs/react-modal gh-pages --force",
-    "lint": "eslint lib/ specs/"
+    "lint": "eslint lib/ specs/",
+    "compile": "./node_modules/.bin/babel -d lib/ src/"
   },
   "authors": [
     "Ryan Florence"
